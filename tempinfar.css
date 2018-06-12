@@ -1,0 +1,40 @@
+html{
+    background-image:url("https://www.skymetweather.com/content/wp-content/uploads/2013/11/Temperature-in-Delhi.jpg");
+    font-style: oblique;
+   font-weight: 900;
+    font-family:inherit;
+}
+#container {
+    height: 430px;
+    width: 500px;
+   background-color: cyan;
+    margin: 100px auto;
+    padding:25px;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 0px 10px darkorange;
+    
+    
+}
+
+#fahrenheit {
+   background-color:darkorange ;
+   margin: 100px 15px;
+   position: absolute;
+  padding: 15px;
+    
+}
+
+#note {
+       margin: 160px 15px;
+       position: absolute;
+       padding: 15px;
+}
+
+
+#celsius {
+     margin: 220px 15px ;
+     height: auto;
+     padding: 15px;
+   
+}

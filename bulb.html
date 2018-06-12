@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+   <html lang="en">
+    <head>
+        <title>bulb</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+      
+       <style>
+                        .circle {
+                                margin: 50px auto;
+                                border-radius: 50%;
+                                padding: 20px; 
+                                width: 200px;
+                                height: 190px;
+                                position: relative;
+  
+                        }
+
+                            .grey { 
+
+                                background-color: grey;
+                            }
+
+                            .yellow {
+                                 background-color: yellow;
+                            }
+                            #btn {     
+                               
+                                     position: absolute;
+                                     left: 70px;
+                                  margin: 250px 30px;
+                                }
+     </style>
+       </head>
+
+       
+       <body>
+            
+      <div id="glow" class="circle grey"> 
+          
+     <button id="btn" onclick="button_click()" >switch ON</button>
+           
+   </div><br>
+      <p style="text-align: center">click on switch for on and off</p>
+      <script >
+      
+                function button_click() { 
+                                 if(document.getElementById("glow").classList.contains("grey"))
+                                        {
+                                  document.getElementById("glow").classList.remove("grey");
+                                     document.getElementById("glow").classList.add("yellow");
+                                    document.getElementById("btn").innerHTML= 'switch off';
+                                            }
+                                    
+                                    else{
+                                        document.getElementById("glow").classList.remove("yellow");
+                                        document.getElementById("glow").classList.add("grey");
+                                        document.getElementById("btn").innerHTML='switch on';
+                                        
+                                    }
+                                }
+</script>
+            </body>
+       </html>
+       
+       
+      

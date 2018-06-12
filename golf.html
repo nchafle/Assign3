@@ -1,0 +1,151 @@
+<!-- •	Create and 5 input boxes to signify 5 rounds 
+       and when entered ‘Number of strokes’ taken by player in each round 
+       we should be able to see the ‘STRING’ returned from your Javascript code right below the corresponding input boxes. -->
+
+
+
+
+<!DOCTYPE html>
+
+   <html lang="en">
+    <head>
+        <title>golf</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        
+        <style>    
+            body {  margin: 50px auto;
+                    position: relative;
+                    width: 750px;
+                    height: 750px;
+                    color:aliceblue;
+                    background-color: gray;
+            } 
+            .box {
+                 width: 250px;
+                 height: auto;
+                 text-align: center;
+                 line-height: 1;
+                 text-decoration-color:black;
+                 color:#96b532;
+                 left: 50px;
+                 margin: 50px;
+                 float: left;
+                 font-size: 20px;
+            }
+            .b1 {
+                 position: relative;
+                }
+            
+             .b2 {
+                position: relative;
+                  }
+            
+             .b3 {
+                position: relative;
+                }
+            
+             .b4 {
+                  position: relative;
+                }
+            
+             .b5 {
+                  position: relative;
+              }
+            #msg1, #msg2, #msg3, #msg4, #msg5 { color: aliceblue;
+                
+            }
+                
+           #box11, #box22, #box33, #box44, #box55{ 
+               font-size: 20px;
+               font-family: monospace;
+                
+            }
+            
+        </style>
+ </head>
+       <body>
+           <h2 style="text-align: center; font-size: 50px;"><b> Game of Golf </b>  </h2>
+   
+           
+           <div class="box b1"  id="div1"><h4>Round 1</h4> par = 4 <br><input type="number" id="box11"  placeholder =" Strokes" onfocusout= myFunction(this)>                                    <div id="msg1"></div></div>
+           
+   
+           <div class="box b2" id="div2"><h4>Round 2</h4>par = 8 <br><input type="number" id="box22"   placeholder =" Strokes" onfocusout= myFunction(this)>                                    <div id="msg2"></div></div>
+           
+    
+           <div class="box b3" id="div3"><h4>Round 3</h4> par = 14<br><input type="number" id="box33"  placeholder =" Strokes" onfocusout= myFunction(this)>                                     <div id="msg3"></div></div>
+           
+   
+           <div class="box b4" id="div4"><h4>Round 4</h4> par = 20 <br><input type="number" id="box44" placeholder =" Strokes"  onfocusout= myFunction(this)>                                    <div id="msg4"></div></div>
+           
+   
+           <div class="box b5" id="div5"><h5>Round 5</h5> par = 24 <br><input type="number" id="box55" placeholder =" Strokes" onfocusout= myFunction(this)>                                       <div id="msg5"></div></div>
+           
+       </body>
+       <script>
+           function myFunction(num) { 
+               var x = num.value;
+               var id = num.id;
+            
+               console.log(id,x);
+            switch (id) {
+       case "box11" :
+                    var msg = condi(4,x) 
+                    console.log(msg);
+                    document.getElementById("msg1").innerHTML=msg;
+                      break;
+       case "box22" :
+                      var  msg = condi(8,x);
+                    document.getElementById("msg2").innerHTML=msg;
+                      break;
+        case "box33" :
+                       var msg = condi(14,x);
+                    document.getElementById("msg3").innerHTML=msg;
+                      break;
+        case "box44" :
+                     var msg =  condi(20,x);
+                    document.getElementById("msg4").innerHTML=msg;
+                      break;
+        case "box55" :
+                     var msg = condi(24,x);
+                    document.getElementById("msg5").innerHTML=msg;
+                      break;
+       
+    default:
+            text = "No value found";
+              
+            }
+              
+      
+     
+             function condi(par,x){  
+               if( x == 1 )
+                   { console.log(x);
+                      return "Hole-in-one!";
+                   }
+              else if(x <=  par - 2) 
+              {
+                 return "Eagle";
+               }
+               else if( x == par -1)
+               {
+                   return "Birdie";
+               }
+                else if( x == par)
+                {
+                  return "Par";
+               }
+                else if( x == par + 1)
+                {
+                  return "Bogey";
+               }
+                else  {
+                   return "Double Bogey";
+               }
+               }
+                
+        
+           }
+       </script>
+</html>
